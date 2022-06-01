@@ -1,1 +1,26 @@
-<p>home-form works!</p>
+<!-- Formulario -->
+<mat-card>
+  <mat-card-title>
+    Formulario basico
+  </mat-card-title>
+  <json-schema-form
+    [data]="data"
+    [schema]="schema"
+    [layout]="layout"
+    [options]="options"
+    framework="material-design"
+    (onSubmit)="handleSubmit($event)"
+  ></json-schema-form>
+  <mat-card-actions>
+    <button type="button" mat-raised-button color="primary" (click)="chargeData()">
+      Cargar data
+    </button>
+    <button type="button" mat-raised-button color="accent" (click)="reset()">
+      Reset
+    </button>
+  </mat-card-actions>
+  <mat-card-content *ngIf="res">
+    <pre>{{res|json}}</pre>
+  </mat-card-content>
+</mat-card>
+

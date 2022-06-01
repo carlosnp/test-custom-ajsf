@@ -1,0 +1,6 @@
+/**
+ * Opciones
+ */
+export const options = {
+
+};
