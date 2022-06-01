@@ -40,7 +40,7 @@ export class HomeFormComponent implements OnInit, OnDestroy {
    */
   chargeData() {
     this.data = {
-      "name": "Gianni Lockman",
+      "name": "forbidden",
       "email": "your.email+fakedata52899@gmail.com",
       "comment": "Jasmin Wisoky"
     }
@@ -50,6 +50,7 @@ export class HomeFormComponent implements OnInit, OnDestroy {
    */
   reset() {
     this.data = {};
+    this.res = null;
   }
   /**
    * Formulario

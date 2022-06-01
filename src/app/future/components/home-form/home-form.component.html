@@ -1,26 +1,33 @@
 <!-- Formulario -->
-<mat-card>
+<mat-card style="border-radius: 0%;">
   <mat-card-title>
     Formulario basico
   </mat-card-title>
-  <json-schema-form
-    [data]="data"
-    [schema]="schema"
-    [layout]="layout"
-    [options]="options"
-    framework="material-design"
-    (onSubmit)="handleSubmit($event)"
-  ></json-schema-form>
-  <mat-card-actions>
+
+  <mat-card-content>
+    <json-schema-form
+      [data]="data"
+      [schema]="schema"
+      [layout]="layout"
+      [options]="options"
+      framework="material-design"
+      language="es"
+      (onSubmit)="handleSubmit($event)"
+    ></json-schema-form>
+  </mat-card-content>
+
+  <mat-card-actions style="display: flex; justify-content: center; align-items: center;">
     <button type="button" mat-raised-button color="primary" (click)="chargeData()">
       Cargar data
     </button>
     <button type="button" mat-raised-button color="accent" (click)="reset()">
-      Reset
+      Limpiar
     </button>
   </mat-card-actions>
-  <mat-card-content *ngIf="res">
+
+  <mat-card-footer *ngIf="res">
     <pre>{{res|json}}</pre>
-  </mat-card-content>
+  </mat-card-footer>
+
 </mat-card>
 

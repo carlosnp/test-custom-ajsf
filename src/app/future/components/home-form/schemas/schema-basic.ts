@@ -2,29 +2,26 @@
  * Esquema basico
  */
 export const schemaBasic = {
-  "type": "object",
-  "title": "Comment",
+  type: "object",
+  title: "Comment",
   "properties": {
     "name": {
-      "title": "Name",
-      "type": "string"
+      title: "Nombre",
+      type: "string",
+      notBlackListed: true,
     },
     "email": {
-      "title": "Email",
-      "type": "string",
+      title: "Email",
+      type: "string",
       "pattern": "^\\S+@\\S+$",
       "description": "Email will be used for evil."
     },
     "comment": {
-      "title": "Comment",
-      "type": "string",
+      title: "Comentario",
+      type: "string",
       "maxLength": 20,
       "validationMessage": "Don't be greedy!"
     }
   },
-  "required": [
-    "name",
-    "email",
-    "comment"
-  ]
+  required: ["name", "email", "comment"]
 };
